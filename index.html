@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profile - Mail Isaev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="profile-container">
+    <!-- SOL TƏRƏF: ƏMƏKDAŞIN XÜLASƏ KARTI -->
+    <aside class="profile-summary-card">
+        <a href="#" class="back-link"><i class="fa-solid fa-chevron-left"></i> Back to Headcount Table</a>
+        
+        <div class="avatar">MI</div>
+        
+        <h1>Mail Isaev</h1>
+        <p class="job-title">FACILITIES ASSISTANT</p>
+        
+        <div class="status-tag">
+            <i class="fa-solid fa-bars-staggered"></i> Onboarding
+        </div>
+        
+        <div class="info-pills">
+            <span class="pill">ID: GEO1</span>
+            <span class="pill">Joined: 03 Dec 2020</span>
+        </div>
+        
+        <div class="action-buttons">
+            <button class="btn btn-edit"><i class="fa-solid fa-pencil"></i> Edit</button>
+            <button class="btn btn-delete"><i class="fa-solid fa-trash-can"></i> Delete</button>
+        </div>
+        
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <ul>
+                <li><i class="fa-solid fa-envelope"></i> <span>EMAIL</span><p>mail.isaev@company.com</p></li>
+                <li><i class="fa-solid fa-phone"></i> <span>PHONE</span><p>N/A</p></li>
+                <li><i class="fa-solid fa-calendar-days"></i> <span>BIRTH DATE</span><p>03 Dec 1989</p></li>
+                <li><i class="fa-solid fa-location-dot"></i> <span>ADDRESS</span><p>N/A</p></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- SAĞ TƏRƏF: TABLI MƏLUMAT BÖLMƏSİ -->
+    <main class="profile-details-content">
+        <nav class="profile-tabs">
+            <a href="#" class="tab-link">
+                <i class="fa-solid fa-user"></i> Overview
+            </a>
+            <a href="#" class="tab-link">
+                <i class="fa-solid fa-briefcase"></i> Job Details
+            </a>
+            <a href="#" class="tab-link">
+                <i class="fa-solid fa-file-lines"></i> Job Descriptions
+            </a>
+            <a href="#" class="tab-link active">
+                <i class="fa-solid fa-box-archive"></i> Asset Registry
+            </a>
+             <a href="#" class="tab-link">
+                <i class="fa-solid fa-chart-line"></i> Activity
+            </a>
+        </nav>
+
+        <div class="tab-content">
+            <!-- Asset Registry Tabının Məzmunu -->
+            <div id="asset-registry" class="tab-pane active">
+                <h2>Assigned Assets</h2>
+                <p class="section-description">Assets that require confirmation from the employee.</p>
+                
+                <div class="asset-list">
+                    <!-- Nümunə Asset 1: Gözləmədə -->
+                    <div class="asset-card" data-asset-id="1">
+                        <div class="asset-card-main">
+                            <div class="asset-icon"><i class="fa-solid fa-laptop"></i></div>
+                            <div class="asset-info">
+                                <h4>MacBook Pro 16"</h4>
+                                <p>Assigned on: 25 Sep 2023 &bull; Tag: NTB-001</p>
+                            </div>
+                        </div>
+                        <div class="asset-actions">
+                            <button class="btn btn-warning" data-action="clarify"><i class="fa-solid fa-circle-question"></i> Need Clarification</button>
+                            <button class="btn btn-success" data-action="accept"><i class="fa-solid fa-check"></i> Accept</button>
+                        </div>
+                    </div>
+
+                    <!-- Nümunə Asset 2: Artıq Qəbul Edilib -->
+                     <div class="asset-card accepted" data-asset-id="2">
+                        <div class="asset-card-main">
+                             <div class="asset-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <div class="asset-info">
+                                <h4>iPhone 14 Pro</h4>
+                                <p>Assigned on: 15 Aug 2023 &bull; Tag: PHN-005</p>
+                            </div>
+                        </div>
+                        <div class="asset-actions">
+                            <p class="status-confirmed"><i class="fa-solid fa-check-circle"></i> Accepted on 16 Aug 2023</p>
+                        </div>
+                    </div>
+
+                     <!-- Nümunə Asset 3: Gözləmədə -->
+                    <div class="asset-card" data-asset-id="3">
+                        <div class="asset-card-main">
+                             <div class="asset-icon"><i class="fa-solid fa-id-card"></i></div>
+                            <div class="asset-info">
+                                <h4>ASAN İmza (SIM Card)</h4>
+                                <p>Assigned on: 24 Sep 2023 &bull; Tag: SCR-001</p>
+                            </div>
+                        </div>
+                        <div class="asset-actions">
+                             <button class="btn btn-warning" data-action="clarify"><i class="fa-solid fa-circle-question"></i> Need Clarification</button>
+                            <button class="btn btn-success" data-action="accept"><i class="fa-solid fa-check"></i> Accept</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
