@@ -1,0 +1,204 @@
+/* === ÜMUMİ VƏ DİZAYN SİSTEMİ === */
+:root {
+    --primary-blue: #3B5998; /* Dizayndakı göy rəng */
+    --light-blue-bg: #4e69a2;
+    --danger-red: #e74c3c;
+    --background-color: #F0F2F5;
+    --card-bg: #FFFFFF;
+    --text-primary: #1c1e21;
+    --text-secondary: #65676b;
+    --border-color: #dddfe2;
+    --success-green: #4CAF50;
+    --warning-orange: #FFA726;
+    --font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 24px;
+}
+
+.profile-container {
+    display: flex;
+    gap: 24px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* === SOL KART: XÜLASƏ === */
+.profile-summary-card {
+    flex: 0 0 320px;
+    background-color: var(--primary-blue);
+    color: white;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    align-self: flex-start; /* Hündürlüyü məzmuna görə olsun */
+}
+
+.back-link {
+    display: block;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+.back-link i { margin-right: 8px; }
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 auto 16px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.profile-summary-card h1 {
+    margin: 0 0 4px 0;
+    font-size: 24px;
+}
+
+.job-title {
+    margin: 0 0 16px 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.status-tag {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--text-primary);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+.status-tag i { margin-right: 6px; }
+
+.info-pills {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.pill {
+    background-color: var(--light-blue-bg);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+.btn {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.btn:hover { opacity: 0.9; }
+
+.btn-edit { background-color: rgba(255, 255, 255, 0.9); color: var(--primary-blue); }
+.btn-delete { background-color: var(--danger-red); color: white; }
+
+.contact-info { text-align: left; }
+.contact-info h3 { border-top: 1px solid rgba(255, 255, 255, 0.3); padding-top: 24px; margin-top: 0; font-size: 16px; }
+.contact-info ul { list-style: none; padding: 0; margin: 0; }
+.contact-info li { display: flex; align-items: flex-start; margin-bottom: 20px; }
+.contact-info li i { font-size: 16px; margin-top: 4px; margin-right: 16px; width: 20px; text-align: center; opacity: 0.8; }
+.contact-info li span { display: block; font-size: 12px; opacity: 0.7; }
+.contact-info li p { margin: 2px 0 0 0; font-weight: 500; }
+
+/* === SAĞ KART: DETALLAR === */
+.profile-details-content {
+    flex-grow: 1;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.profile-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 24px;
+}
+
+.tab-link {
+    padding: 16px 0;
+    margin-right: 24px;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.tab-link.active { color: var(--primary-blue); border-bottom-color: var(--primary-blue); }
+
+.tab-content { padding: 24px; }
+.tab-pane { display: none; }
+.tab-pane.active { display: block; }
+
+/* === YENİ BÖLMƏ: ASSET REGISTRY === */
+#asset-registry h2 { font-size: 20px; margin: 0 0 8px 0; }
+.section-description { font-size: 14px; color: var(--text-secondary); margin: 0 0 24px 0; }
+
+.asset-list { display: flex; flex-direction: column; gap: 16px; }
+.asset-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F0F2F5; /* A bit of contrast */
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+.asset-card-main { display: flex; align-items: center; gap: 16px; }
+
+.asset-icon {
+    font-size: 24px;
+    color: var(--primary-blue);
+    flex-shrink: 0;
+}
+
+.asset-info h4 { margin: 0 0 4px 0; font-size: 16px; }
+.asset-info p { margin: 0; font-size: 13px; color: var(--text-secondary); }
+
+.asset-actions { display: flex; gap: 12px; }
+.asset-actions .btn { padding: 8px 16px; }
+.btn-success { background-color: var(--success-green); color: white; }
+.btn-warning { background-color: var(--warning-orange); color: white; }
+
+.status-confirmed, .status-pending {
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.status-confirmed { color: var(--success-green); }
+.status-pending { color: var(--warning-orange); }
